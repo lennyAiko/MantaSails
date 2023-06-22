@@ -1,7 +1,7 @@
 {
   "name": "mantasails",
   "displayName": "MantaSails",
-  "description": "A snippet for Sails",
+  "description": "A snippet pack to make you more productive working with Sails",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.54.0"

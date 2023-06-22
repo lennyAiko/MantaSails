@@ -1,1 +1,48 @@
-{}
+{
+	"Generate function": {
+		"prefix": "mxf",
+		"body": [
+			"module.exports = {\n",
+			"\tfriendlyName: '$1',\n",
+			"\tdescription: 'This is $1',\n",
+			"\tinputs: {",
+			"\t\t$2",
+			"\t},\n",
+			"\texits: {",
+			"\t\t$3",
+			"\t},\n",
+			"\tfn: async function (inputs, exits) {\n",
+			"\t\t$0\n",
+			"\t\t// All done",
+			"\t\treturn;",
+			"\t}",
+			"}"
+		],
+        "description": "Generate a function following Sails convention"
+	},
+
+	"Input template": {
+		"prefix": "minput",
+		"body": [
+			"$1: {",
+			"\ttype: '$2',",
+			"\trequired: ${3:true},",
+			"\tdefault: ${4:null},",
+			"}"
+		],
+		"description": "This is an input template"
+	},
+
+	"Exit template": {
+		"prefix": "einput",
+		"body": [
+			"$1: {",
+			"\tresponseType: $2,",
+			"\tdescription: '$3'",
+			"}"
+		],
+		"description": "This is an exit template"
+	}
+
+
+}
