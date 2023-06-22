@@ -1,0 +1,20 @@
+{
+  "name": "mantasails",
+  "displayName": "MantaSails",
+  "description": "A snippet for Sails",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
