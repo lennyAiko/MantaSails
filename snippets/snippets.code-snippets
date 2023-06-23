@@ -88,6 +88,12 @@
 		"description": "Calculate average of specified attribute"
 	},
 
+	"count records": {
+		"prefix": ["cnt", "count"],
+		"body": "let $1Records = await $2.count({ $3: $0 })",
+		"description": "Get total number of records matching criteria"
+	},
+
 	"create an object": {
 		"prefix": ["co", "createobj"],
 		"body": "let $1 = await $2.create({ $0 }).fetch()",
