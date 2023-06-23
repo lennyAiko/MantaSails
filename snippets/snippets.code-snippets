@@ -53,6 +53,41 @@
 	},
 
 	// WATERLINE SNIPPETS
+
+	"add to collection": {
+		"prefix": ["atc", "addtocollection"],
+		"body": "await $1.addToCollection($2, '$3').members([$4, $0])",
+		"description": "Add IDs of children to parent"
+	},
+
+	"archive an object": {
+		"prefix": ["arc", "archive"],
+		"body": "await $1.archive({ $2: $0 })",
+		"description": "Soft-delete records that matches a given criteria"
+	},
+
+	"access an archived object": {
+		"prefix": ["aarc", "accessarchive"],
+		"body": [
+			"let ${1:archive} = await Archive.findOne({",
+			"\tfromModel: '$2',",
+			"\toriginalRecordId: $3",
+			"})"
+		],
+		"description": "Access soft-deleted records that matches a given criteria"
+	},
+
+	"calculate average": {
+		"prefix": ["avg", "average"],
+		"body": [
+			"let ${1:average} = await $2.avg('${3:numericCollection}')",
+			".where({",
+			"\t$4: { $5: $6 }",
+			"})"
+		],
+		"description": "Calculate average of specified attribute"
+	},
+
 	"create an object": {
 		"prefix": ["co", "createobj"],
 		"body": "let $1 = await $2.create({ $0 }).fetch()",
@@ -95,11 +130,11 @@
 	"find or create object exec": {
 		"prefix": ["foce", "findorcreateexec"],
 		"body": [
-			"$1.findOrCreate({ $2: $3 }, ${4: objectToCreate})",
-			"\t.exec(async(${5:err}, ${6:obj}, ${7:wasCreated}) => { \n",
-			"\t\tif(${5:err}) {\n\t\t\tsails.log(${5:err})\n\t\t\treturn this.res.serverError(${5:err})\n\t\t}",
-			"\t\tif(${7:wasCreated}) {\n\t\t\tsails.log('Created new object')\n\t\t\treturn ${6:obj}\n\t\t}",
-			"\t\telse {\n\t\t\tsails.log('Found existing object')\n\t\t\treturn ${6:obj}\n\t\t}",
+			"let item = $1.findOrCreate({ $2: $3 }, ${4: objectToCreate})",
+			".exec(async(${5:err}, ${6:obj}, ${7:wasCreated}) => { \n",
+			"\tif(${5:err}) {\n\t\tsails.log(${5:err})\n\t\treturn this.res.serverError(${5:err})\n\t}",
+			"\tif(${7:wasCreated}) {\n\t\tsails.log('Created new object')\n\treturn ${6:obj}\n\t}",
+			"\telse {\n\t\tsails.log('Found existing object')\n\t\treturn ${6:obj}\n\t}",
 			"})",
 			"$0"
 		],
