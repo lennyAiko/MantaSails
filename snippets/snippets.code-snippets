@@ -1,6 +1,7 @@
 {
-	"Generate function": {
-		"prefix": "mxf",
+	// GENERICS
+	"generate function": {
+		"prefix": ["mxf", "fhelper"],
 		"body": [
 			"module.exports = {\n",
 			"\tfriendlyName: '$1',\n",
@@ -21,27 +22,88 @@
         "description": "Generate a function following Sails convention"
 	},
 
-	"Input template": {
-		"prefix": "minput",
+	"input template": {
+		"prefix": ["si", "sinput"],
 		"body": [
 			"$1: {",
 			"\ttype: '$2',",
 			"\trequired: ${3:true},",
-			"\tdefault: ${4:null},",
+			"\tdefault: ${0:null},",
 			"}"
 		],
 		"description": "This is an input template"
 	},
 
-	"Exit template": {
-		"prefix": "einput",
+	"exit template": {
+		"prefix": ["ei", "einput"],
 		"body": [
 			"$1: {",
 			"\tresponseType: $2,",
-			"\tdescription: '$3'",
+			"\tdescription: '$0'",
 			"}"
 		],
 		"description": "This is an exit template"
+	},
+
+	// REQUEST SNIPPETS
+	"unpack request body": {
+		"prefix": ["rb", "rbody"],
+		"body": "const { $1, $0 } = this.req.body",
+		"description": "To unpack req.body much faster"
+	},
+
+	// WATERLINE SNIPPETS
+	"create an object": {
+		"prefix": ["co", "createobj"],
+		"body": "let $1 = await $2.create({ $0 }).fetch()",
+		"description": "To create a new obj"
+	},
+
+	"find one object": {
+		"prefix": ["fo", "findone"],
+		"body": [
+			"let $1Record = await $2.findOne({ $3: $4 })\n",
+			"if (!$1Record) {\n\tsails.log('Could not find $1')",
+			"\tthrow '$0' \n}"
+		],
+		"description": "To query a single object"
+	},
+
+	"find objects": {
+		"prefix": ["f", "find"],
+		"body": "let $1Record = await $2.find({ $3: $0 })",
+		"description": "To query multiple objects"
+	},
+
+	"find objects projections": {
+		"prefix": ["fop", "findproj"],
+		"body": [
+			"let $1Record = await $2.find({",
+			"\twhere: { $3: $4 },",
+			"\tselect: [ $5, $0 ]",
+			"});"
+		],
+		"description": "To query multiple objects with projections"
+	},
+
+	"find or create object": {
+		"prefix": ["foc", "findorcreate"],
+		"body": "let ${1:obj}Record = await $2.findOrCreate({ $3: $4 }, ${0: objectToCreate})",
+		"description": "To find an object or create it"
+	},
+
+	"find or create object exec": {
+		"prefix": ["foce", "findorcreateexec"],
+		"body": [
+			"$1.findOrCreate({ $2: $3 }, ${4: objectToCreate})",
+			"\t.exec(async(${5:err}, ${6:obj}, ${7:wasCreated}) => { \n",
+			"\t\tif(${5:err}) {\n\t\t\tsails.log(${5:err})\n\t\t\treturn this.res.serverError(${5:err})\n\t\t}",
+			"\t\tif(${7:wasCreated}) {\n\t\t\tsails.log('Created new object')\n\t\t\treturn ${6:obj}\n\t\t}",
+			"\t\telse {\n\t\t\tsails.log('Found existing object')\n\t\t\treturn ${6:obj}\n\t\t}",
+			"})",
+			"$0"
+		],
+		"description": "To find an object or create it, with exec"
 	}
 
 
