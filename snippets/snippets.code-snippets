@@ -119,7 +119,7 @@
 	},
 
 	"delete records": {
-		"prefix": ["dr", "deleterecords"],
+		"prefix": ["drs", "deleterecords"],
 		"body": "await $1.destroy({ $2: $0 })",
 		"description": "To delete more than one record with same criteria"
 	},
@@ -142,6 +142,12 @@
 			"})${0:.fetch()?}"
 		],
 		"description": "To delete a range of records"
+	},
+
+	"delete one object": {
+		"prefix": ["dr", "deleterecord"],
+		"body": "let $1Record = await $2.destroyOne({ $3: $0 })",
+		"description": "To delete a single object"
 	},
 
 	"find one object": {
