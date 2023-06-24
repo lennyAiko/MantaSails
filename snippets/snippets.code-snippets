@@ -96,8 +96,52 @@
 
 	"create an object": {
 		"prefix": ["co", "createobj"],
-		"body": "let $1 = await $2.create({ $0 }).fetch()",
+		"body": "await $1.create({ $2: $0 }).fetch()",
 		"description": "To create a new obj"
+	},
+
+	"create an object and fetch": {
+		"prefix": ["cof", "createobjfetch"],
+		"body": "let $1 = await $2.create({ $3: $0 }).fetch()",
+		"description": "To create a new obj and fetch"
+	},
+
+	"create bulk object": {
+		"prefix": ["cb", "createbulk"],
+		"body": "await $1.createEach({ $2: $3 }, { $4: $0 }).fetch()",
+		"description": "To create bulk objs"
+	},
+
+	"create bulk object and fetch": {
+		"prefix": ["cbf", "createbulkfetch"],
+		"body": "let $1 = await $2.createEach({ $3: $4 }, { $5: $0 }).fetch()",
+		"description": "To create bulk objs and fetch"
+	},
+
+	"delete records": {
+		"prefix": ["dr", "deleterecords"],
+		"body": "await $1.destroy({ $2: $0 })",
+		"description": "To delete more than one record with same criteria"
+	},
+
+	"delete specific records": {
+		"prefix": ["dsr", "deletespecificrecords"],
+		"body": [
+			"await $1.destroy({",
+			"\tid: { in: [ $2, $0 ] }",
+			"})"
+		],
+		"description": "To delete more than specific records"
+	},
+
+	"delete range records": {
+		"prefix": ["drr", "deleterangerecords"],
+		"body": [
+			"let $1Records = await $2.destroy({",
+			"\tcontroversiality: { '$3': $4 }",
+			"})${0:.fetch()?}"
+		],
+		"description": "To delete a range of records"
 	},
 
 	"find one object": {
