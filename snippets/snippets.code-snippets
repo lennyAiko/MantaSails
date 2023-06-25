@@ -45,12 +45,38 @@
 		"description": "This is an exit template"
 	},
 
+	// ROUTES SNIPPETS
+	"get route": {
+		"prefix": ["gr", "getroute"],
+		"body": "'GET /$1': '$2/$0'",
+		"description": "A template for get route"
+	},
+
+	"post route": {
+		"prefix": ["pr", "postroute"],
+		"body": "'POST /$1': '$2/$0'",
+		"description": "A template for post route"
+	},
+
+	"put route": {
+		"prefix": ["pur", "putroute"],
+		"body": "'PUT /$1': '$2/$0'",
+		"description": "A template for put route"
+	},
+
+	"patch route": {
+		"prefix": ["par", "patchroute"],
+		"body": "'PATCH /$1': '$2/$0'",
+		"description": "A template for patch route"
+	},
+
 	// REQUEST SNIPPETS
 	"unpack request body": {
 		"prefix": ["rb", "rbody"],
 		"body": "const { $1, $0 } = this.req.body",
 		"description": "To unpack req.body much faster"
 	},
+	
 
 	// WATERLINE SNIPPETS
 
