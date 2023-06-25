@@ -70,6 +70,44 @@
 		"description": "A template for patch route"
 	},
 
+	// ATTRIBUTES SNIPPETS
+	"boolean attributes": {
+		"prefix": ["battr", "booleanattribute"],
+		"body": [
+			"$1: {",
+			"\ttype: 'boolean',",
+			"\trequire: true,",
+			"\tdefaultsTo: false,",
+			"\tisBoolean: true",
+			"},$0"
+		],
+		"description": "A template for boolean attribute"
+	},
+
+	"string attributes": {
+		"prefix": ["sattr", "stringattribute"],
+		"body": [
+			"$1: {",
+			"\ttype: 'string',",
+			"\trequire: true,",
+			"\tmaxLength: $2",
+			"},$0"
+		],
+		"description": "A template for boolean attribute"
+	},
+
+	"number attributes": {
+		"prefix": ["nattr", "numberattribute"],
+		"body": [
+			"$1: {",
+			"\ttype: 'number',",
+			"\trequire: true,",
+			"\tisNumber: true",
+			"},$0"
+		],
+		"description": "A template for boolean attribute"
+	},
+
 	// REQUEST SNIPPETS
 	"unpack request body": {
 		"prefix": ["rb", "rbody"],
