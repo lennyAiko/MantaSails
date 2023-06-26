@@ -38,6 +38,7 @@
 		"prefix": ["ei", "einput"],
 		"body": [
 			"$1: {",
+			"\tstatusCode: $2",
 			"\tdescription: '$0'",
 			"}"
 		],
@@ -225,14 +226,14 @@
 
 	"find objects": {
 		"prefix": ["f", "find"],
-		"body": "let $1Record = await $2.find({ $3: $0 })",
+		"body": "let $1Records = await $2.find({ $3: $0 })",
 		"description": "To query multiple objects"
 	},
 
 	"find objects projections": {
 		"prefix": ["fop", "findproj"],
 		"body": [
-			"let $1Record = await $2.find({",
+			"let $1Records = await $2.find({",
 			"\twhere: { $3: $4 },",
 			"\tselect: [ $5, $0 ]",
 			"});"
