@@ -76,7 +76,7 @@
 		"body": [
 			"$1: {",
 			"\ttype: 'boolean',",
-			"\trequire: true,",
+			"\trequired: true,",
 			"\tdefaultsTo: false,",
 			"\tisBoolean: true",
 			"},$0"
@@ -89,7 +89,7 @@
 		"body": [
 			"$1: {",
 			"\ttype: 'string',",
-			"\trequire: true,",
+			"\trequired: true,",
 			"\tmaxLength: $2",
 			"},$0"
 		],
@@ -101,7 +101,7 @@
 		"body": [
 			"$1: {",
 			"\ttype: 'number',",
-			"\trequire: true,",
+			"\trequired: true,",
 			"\tisNumber: true",
 			"},$0"
 		],
