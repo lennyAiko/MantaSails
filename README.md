@@ -1,65 +1,76 @@
-# mantasails README
+# MantaSails README
 
-This is the README for your extension "mantasails". After writing up a brief description, we recommend including the following sections.
+[![made in nigeria](https://img.shields.io/badge/made%20in-nigeria-008751.svg?style=for-the-badge)](https://github.com/acekyd/made-in-nigeria) [![SailsJs](https://img.shields.io/badge/Framework-SailsJs-blue.svg?longCache=true&style=for-the-badge)](https://sailsjs.com/)
 
-## Features
+This is the README for your extension "MantaSails".
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+MantaSails is a Sails snippet tool for vscode. It is efficient and fun to make use of. It enables a faster workflow for devs using Sails. It has been tested and I am sure it would help become more productive.
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+> Tip: After selecting what snippet to use, use the tab key to navigate inputs.
 
 ---
 
-## Working with Markdown
+## Installation
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+1. Open the **Extensions** sidebar in VS Code. `View → Extensions`
+2. Search for `MantaSails`, choose "MantaSails"
+3. Click **Install** to install it
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+---
 
-## For more information
+## License
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+MantaSails is released under the [MIT License](https://github.com/lennyAiko/MantaSails/blob/main/LICENSE)
+
+---
+
+## List of snippets
+|Prefix       |Code                       |
+|---          |---                        |
+|mxf or fhelper|generate a function|
+|si or sinput|generate an input template|
+|ei or einput|generate an exit template|
+|gr or getroute|generate a get route template|
+|pr or postroute|generate a post route template|
+|pur or putroute|generate a put route template|
+|par or patchroute|generate a patch route template|
+|battr or booleanattribute|generate a boolean attribute template|
+|sattr or stringattribute|generate a string attribute template|
+|nattr or numberattribute|generate a number attribute template|
+|rb or rbody|generate a template to unpack request|
+|atc or addtocollection|generate a template for `.addToCollection`|
+|arc or archive|generate a template for `.archive`|
+|aarc or accessarchive|generate a template for `.Archive.findOne`|
+|avg or average|generate a template for `.average`|
+|cnt or count|generate a template for `.count`|
+|co or createobj|generate a template for `.create`|
+|cof or createobjfetch|generate a template for fetch `.create`|
+|cb or createbulk|generate a template for `.createEach`|
+|cbf or createbulkfetch|generate a template for fetch `.createEach`|
+|drs or deleterecords|generate a template multiple `.destroy`|
+|dsr or deletespecificrecords|generate a template for specific `.destroy`|
+|drr or deleterangerecords|generate a template for range `.destroy`|
+|dr or deleterecord|generate a template for `.destroy`|
+|fo or findOne|generate a template for `.findOne`|
+|f or find|generate a template for `.find`|
+|fop or findproj|generate a template for projective `.find`|
+|foc or findorcreate|generate a template for `.findOrCreate`|
+|foce or findorcreateexec|generate a template for `.findOrCreate`|
+|rc or removecollection|generate a template for `.removeFromCollection`|
+|rsc or replacecollection|generate a template for `.replaceCollection`|
+|sr or streamrecords|generate a template for `.stream`|
+|sumr or sumrecords|generate a template for `.sum`|
+|urs or updaterecords|generate a template for multiple `.update`|
+|ursf or updaterecordsfetch|generate a template for fetch `.update`|
+|ur or updaterecord|generate a template for `.updateOne`|
+|vr or validaterecord|generate a template for `.validate`|
+
+---
+## Contributions
+
+1. Fork
+2. Update `snippets.code-snippets` following the standard
+3. Make PullRequest
+4. Be happy and go for a beer or coffe :-)
 
 **Enjoy!**

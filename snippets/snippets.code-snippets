@@ -38,7 +38,7 @@
 		"prefix": ["ei", "einput"],
 		"body": [
 			"$1: {",
-			"\tstatusCode: $2",
+			"\tstatusCode: $2,",
 			"\tdescription: '$0'",
 			"}"
 		],
