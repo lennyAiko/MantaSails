@@ -3,6 +3,8 @@
   "displayName": "MantaSails",
   "description": "A snippet pack to make you more productive working with Sails",
   "version": "0.0.1",
+  "publisher": "lennyaiko",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.54.0"
   },
@@ -13,8 +15,28 @@
     "snippets": [
       {
         "language": "javascript",
-        "path": "./snippets/snippets.code-snippets"
+        "path": "./snippets/snippets.json"
       }
     ]
-  }
+  },
+  "author": {
+    "name": "Lennox Charles",
+    "email": "lennyaiko17@gmail.com",
+    "url": "https://github.com/lennyaiko/"
+  },
+  "repository": {
+    "url": "https://github.com/lennyaiko/mantasails"
+  },
+  "keywords": [
+		"node",
+		"nodejs",
+		"sails",
+		"sailsjs",
+		"mantasails"
+	],
+  "bugs": {
+		"url": "https://github.com/sailscastshq/sailboat/issues",
+		"email": "kelvin@dominuskelvin.dev"
+	},
+	"homepage": "https://github.com/sailscastshq/sailboat/blob/master/README.md"
 }
