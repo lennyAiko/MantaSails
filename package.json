@@ -3,8 +3,8 @@
   "displayName": "MantaSails",
   "description": "A snippet pack to make you more productive working with Sails",
   "version": "0.0.1",
-  "publisher": "lennyaiko",
-  "icon": "images/icon.png",
+  "publisher": "LennoxCharles",
+  "icon": "image/icon.png",
   "engines": {
     "vscode": "^1.54.0"
   },

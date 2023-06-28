@@ -2,8 +2,6 @@
 
 [![made in nigeria](https://img.shields.io/badge/made%20in-nigeria-008751.svg?style=for-the-badge)](https://github.com/acekyd/made-in-nigeria) [![SailsJs](https://img.shields.io/badge/Framework-SailsJs-blue.svg?longCache=true&style=for-the-badge)](https://sailsjs.com/)
 
-This is the README for your extension "MantaSails".
-
 MantaSails is a Sails snippet tool for vscode. It is efficient and fun to make use of. It enables a faster workflow for devs using Sails. It has been tested and I am sure it would help become more productive.
 
 > Tip: After selecting what snippet to use, use the tab key to navigate inputs.
@@ -72,5 +70,8 @@ MantaSails is released under the [MIT License](https://github.com/lennyAiko/Mant
 2. Update `snippets.code-snippets` following the standard
 3. Make PullRequest
 4. Be happy and go for a beer or coffe :-)
+
+Created by **[Lennox Charles](https://github.com/lennyaiko)**.
+Go follow on **[Twitter](https://twitter.com/c_lennyx)**!
 
 **Enjoy!**
