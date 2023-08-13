@@ -69,9 +69,17 @@ MantaSails is released under the [MIT License](https://github.com/lennyAiko/Mant
 1. Fork
 2. Update `snippets.code-snippets` following the standard
 3. Make PullRequest
-4. Be happy and go for a beer or coffe :-)
+4. Be happy and go for a beer or coffee.
 
 Created by **[Lennox Charles](https://github.com/lennyaiko)**.
 Go follow on **[Twitter](https://twitter.com/c_lennyx)**!
+
+---
+## Coming soon
+- [ ] Work on attributes for associations: Create snippets for associations
+- [ ] Fix default in [`sinput`, `si`]: Change from `default` to `defaultsTo`
+- [ ] Add validations to attributes: for example, email should be `sattre` and cross-check others to be validated
+- [ ] Fix `createEach`: Objects should be in an array
+- [ ] Update readme: check completed tasks and add contributors
 
 **Enjoy!**
