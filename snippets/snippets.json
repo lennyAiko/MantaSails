@@ -1,5 +1,4 @@
 {
-	// GENERICS
 	"generate function": {
 		"prefix": ["mxf", "fhelper"],
 		"body": [
@@ -28,7 +27,7 @@
 			"$1: {",
 			"\ttype: '$2',",
 			"\trequired: ${3:true},",
-			"\tdefault: ${0:null},",
+			"\tdefaultTo: ${0:null},",
 			"}"
 		],
 		"description": "This is an input template"
@@ -45,7 +44,6 @@
 		"description": "This is an exit template"
 	},
 
-	// ROUTES SNIPPETS
 	"get route": {
 		"prefix": ["gr", "getroute"],
 		"body": "'GET /$1': '$2/$0'",
@@ -70,7 +68,6 @@
 		"description": "A template for patch route"
 	},
 
-	// ATTRIBUTES SNIPPETS
 	"boolean attributes": {
 		"prefix": ["battr", "booleanattribute"],
 		"body": [
@@ -108,7 +105,6 @@
 		"description": "A template for boolean attribute"
 	},
 
-	// REQUEST SNIPPETS
 	"unpack request body": {
 		"prefix": ["rb", "rbody"],
 		"body": "const { $1, $0 } = this.req.body",
@@ -116,7 +112,6 @@
 	},
 	
 
-	// WATERLINE SNIPPETS
 
 	"add to collection": {
 		"prefix": ["atc", "addtocollection"],
@@ -172,13 +167,13 @@
 
 	"create bulk object": {
 		"prefix": ["cb", "createbulk"],
-		"body": "await $1.createEach({ $2: $3 }, { $4: $0 }).fetch()",
+		"body": "await $1.createEach([{ $2: $3 }, { $4: $0 }]).fetch()",
 		"description": "To create bulk objs"
 	},
 
 	"create bulk object and fetch": {
 		"prefix": ["cbf", "createbulkfetch"],
-		"body": "let $1 = await $2.createEach({ $3: $4 }, { $5: $0 }).fetch()",
+		"body": "let $1 = await $2.createEach([{ $3: $4 }, { $5: $0 }]).fetch()",
 		"description": "To create bulk objs and fetch"
 	},
 
