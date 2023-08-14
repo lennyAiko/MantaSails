@@ -28,7 +28,7 @@
 			"$1: {",
 			"\ttype: '$2',",
 			"\trequired: ${3:true},",
-			"\tdefault: ${0:null},",
+			"\tdefaultTo: ${0:null},",
 			"}"
 		],
 		"description": "This is an input template"
@@ -172,13 +172,13 @@
 
 	"create bulk object": {
 		"prefix": ["cb", "createbulk"],
-		"body": "await $1.createEach({ $2: $3 }, { $4: $0 }).fetch()",
+		"body": "await $1.createEach([{ $2: $3 }, { $4: $0 }]).fetch()",
 		"description": "To create bulk objs"
 	},
 
 	"create bulk object and fetch": {
 		"prefix": ["cbf", "createbulkfetch"],
-		"body": "let $1 = await $2.createEach({ $3: $4 }, { $5: $0 }).fetch()",
+		"body": "let $1 = await $2.createEach([{ $3: $4 }, { $5: $0 }]).fetch()",
 		"description": "To create bulk objs and fetch"
 	},
 
