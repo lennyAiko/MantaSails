@@ -27,7 +27,7 @@
 			"$1: {",
 			"\ttype: '$2',",
 			"\trequired: ${3:true},",
-			"\tdefault: ${0:null},",
+			"\tdefaultsTo: ${0:null},",
 			"}"
 		],
 		"description": "This is an input template"
