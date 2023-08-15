@@ -89,7 +89,7 @@ Go follow on **[Twitter](https://twitter.com/c_lennyx)**!
 
 ## Contributors
 - Oladapo Ayodeji (@Dipsaint1)
-- Lennox Charles (lennyAiko) 
+- Lennox Charles (@lennyAiko) 
 
 
 **Enjoy!**
