@@ -1,4 +1,5 @@
 {
+	// GENERICS
 	"generate function": {
 		"prefix": ["mxf", "fhelper"],
 		"body": [
@@ -44,6 +45,7 @@
 		"description": "This is an exit template"
 	},
 
+	// ROUTES SNIPPETS
 	"get route": {
 		"prefix": ["gr", "getroute"],
 		"body": "'GET /$1': '$2/$0'",
@@ -68,6 +70,7 @@
 		"description": "A template for patch route"
 	},
 
+	// ATTRIBUTES SNIPPETS
 	"boolean attributes": {
 		"prefix": ["battr", "booleanattribute"],
 		"body": [
@@ -105,6 +108,7 @@
 		"description": "A template for boolean attribute"
 	},
 
+	// REQUEST SNIPPETS
 	"unpack request body": {
 		"prefix": ["rb", "rbody"],
 		"body": "const { $1, $0 } = this.req.body",
@@ -112,6 +116,7 @@
 	},
 	
 
+	// WATERLINE SNIPPETS
 
 	"add to collection": {
 		"prefix": ["atc", "addtocollection"],
