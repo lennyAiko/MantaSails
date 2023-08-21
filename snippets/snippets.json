@@ -94,7 +94,7 @@
 			"\tisString: true",
 			"},$0"
 		],
-		"description": "A template for boolean attribute"
+		"description": "A template for string attribute"
 	},
 
 	"number attributes": {
@@ -108,7 +108,7 @@
 			"\tmin: $1",
 			"},$0"
 		],
-		"description": "A template for boolean attribute"
+		"description": "A template for number attribute"
 	},
 
 	"email attributes": {
@@ -122,7 +122,7 @@
 		  "\tisUnique: true",
 		  "},$0"
 		],
-		"description": "A template for email attribute with validation"
+		"description": "A template for email attribute"
 
 	// REQUEST SNIPPETS
 	"unpack request body": {
