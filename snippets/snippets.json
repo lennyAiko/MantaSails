@@ -91,6 +91,7 @@
 			"\ttype: 'string',",
 			"\trequired: true,",
 			"\tmaxLength: $2",
+			"\tisString: true",
 			"},$0"
 		],
 		"description": "A template for boolean attribute"
@@ -103,10 +104,25 @@
 			"\ttype: 'number',",
 			"\trequired: true,",
 			"\tisNumber: true",
+			"\tmax: $3",
+			"\tmin: $1",
 			"},$0"
 		],
 		"description": "A template for boolean attribute"
 	},
+
+	"email attributes": {
+		"prefix": ["sattre", "sae"],
+		"body": [
+		  "$1: {",
+		  "\ttype: 'string',",
+		  "\trequired: true,",
+		  "\tminLength: $2,",
+		  "\tisEmail: true",
+		  "\tisUnique: true",
+		  "},$0"
+		],
+		"description": "A template for email attribute with validation"
 
 	// REQUEST SNIPPETS
 	"unpack request body": {
