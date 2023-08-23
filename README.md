@@ -8,6 +8,14 @@ MantaSails is a Sails snippet tool for vscode. It is efficient and fun to make u
 
 ---
 
+## Table of Contents
+- [Installation](#installation)
+- [License](#license)
+- [List of snippets](#list-of-snippets)
+- [Contributions](#contributions)
+- [Issues](#issues)
+- [Contributors](#contributors)
+
 ## Installation
 
 1. Open the **Extensions** sidebar in VS Code. `View → Extensions`
@@ -78,15 +86,17 @@ Go follow on **[Twitter](https://twitter.com/c_lennyx)**!
 
 ---
 
-## Coming soon
+## Issues
 
 - [ ] Work on attributes for associations: Create snippets for associations
-- [ ] Fix default in [`sinput`, `si`]: Change from `default` to `defaultsTo`
+- [*] Fix default in [`sinput`, `si`]: Change from `default` to `defaultsTo`
 - [ ] Add validations to attributes: for example, email should be `sattre` and cross-check others to be validated
-- [ ] Fix `createEach`: Objects should be in an array
-- [ ] Update readme: check completed tasks and add contributors
+- [*] Fix `createEach`: Objects should be in an array
+- [*] Update readme: check completed tasks and add contributors
 
 ### Contributors
+- Lennox Charles (@lennyAiko) 
+- Oladapo Ayodeji (@Dipsaint1)
 
 <a href="https://github.com/LennyAiko/MantaSails/graphs/contributors">
   <p align="center">
