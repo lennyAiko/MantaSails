@@ -89,19 +89,16 @@ Go follow on **[Twitter](https://twitter.com/c_lennyx)**!
 ## Issues
 
 - [ ] Work on attributes for associations: Create snippets for associations
-- [*] Fix default in [`sinput`, `si`]: Change from `default` to `defaultsTo`
+- [x] Fix default in [`sinput`, `si`]: Change from `default` to `defaultsTo`
 - [ ] Add validations to attributes: for example, email should be `sattre` and cross-check others to be validated
-- [*] Fix `createEach`: Objects should be in an array
-- [*] Update readme: check completed tasks and add contributors
+- [x] Fix `createEach`: Objects should be in an array
+- [x] Update readme: check completed tasks and add contributors
 
 ### Contributors
-- Lennox Charles (@lennyAiko) 
-- Oladapo Ayodeji (@Dipsaint1)
+- [Lennox Charles](https://github.com/lennyaiko)
+- [Oladapo Ayodeji](https://github.com/Dipsaint1)
+- [Barbara Odozi](https://github.com/geekiedj)
 
-<a href="https://github.com/LennyAiko/MantaSails/graphs/contributors">
-  <p align="center">
-    <img src="https://contrib.rocks/image?repo=LennyAiko/MantaSails" alt="A gallery of avatars from amazing contributors." />
-  </p>
-</a>
+Got some feedback? Send a DM on **[Twitter](https://twitter.com/c_lennyx)**
 
 **Enjoy!**
