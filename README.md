@@ -71,13 +71,20 @@ MantaSails is released under the [MIT License](https://github.com/lennyAiko/Mant
 | ursf or updaterecordsfetch   | generate a template for fetch `.update`         |
 | ur or updaterecord           | generate a template for `.updateOne`            |
 | vr or validaterecord         | generate a template for `.validate`             |
+| pmtm or parentmtm            | generate a template for many-to-many (parent)   |
+| cmtm or childmtm             | generate a template for many-to-many (child)    |
+| ow or oneway                 | generate a template for one-way association     |
+| potm or parentotm            | generate a template for one-to-many (parent)    |
+| cotm or childotm             | generate a template for one-to-many (child)     |
+| poto or parentoto            | generate a template for one-to-one (parent)     |
+| coto or childoto             | generate a template for one-to-one (child)      |
 
 ---
 
 ## Contributions
 
 1. Fork
-2. Update `snippets.code-snippets` following the standard
+2. Update `snippets.json` following the standard
 3. Make PullRequest
 4. Be happy and go for a beer or coffee.
 
@@ -88,11 +95,13 @@ Go follow on **[Twitter](https://twitter.com/c_lennyx)**!
 
 ## Issues
 
-- [ ] Work on attributes for associations: Create snippets for associations
+- [x] Work on attributes for associations: Create snippets for associations
 - [x] Fix default in [`sinput`, `si`]: Change from `default` to `defaultsTo`
-- [ ] Add validations to attributes: for example, email should be `sattre` and cross-check others to be validated
+- [x] Add validations to attributes: for example, email should be `sattre` and cross-check others to be validated
 - [x] Fix `createEach`: Objects should be in an array
 - [x] Update readme: check completed tasks and add contributors
+
+---
 
 ### Contributors
 - [Lennox Charles](https://github.com/lennyaiko)

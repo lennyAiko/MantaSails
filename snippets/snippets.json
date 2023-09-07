@@ -1,5 +1,4 @@
 {
-	// GENERICS
 	"generate function": {
 		"prefix": ["mxf", "fhelper"],
 		"body": [
@@ -45,7 +44,6 @@
 		"description": "This is an exit template"
 	},
 
-	// ROUTES SNIPPETS
 	"get route": {
 		"prefix": ["gr", "getroute"],
 		"body": "'GET /$1': '$2/$0'",
@@ -70,7 +68,6 @@
 		"description": "A template for patch route"
 	},
 
-	// ATTRIBUTES SNIPPETS
 	"boolean attributes": {
 		"prefix": ["battr", "booleanattribute"],
 		"body": [
@@ -123,16 +120,13 @@
 		  "},$0"
 		],
 		"description": "A template for email attribute"
+	},
 
-	// REQUEST SNIPPETS
 	"unpack request body": {
 		"prefix": ["rb", "rbody"],
 		"body": "const { $1, $0 } = this.req.body",
 		"description": "To unpack req.body much faster"
 	},
-	
-
-	// WATERLINE SNIPPETS
 
 	"add to collection": {
 		"prefix": ["atc", "addtocollection"],
@@ -338,6 +332,81 @@
 			"}"
 		],
 		"description": "To validate a particular record"
+	},
+
+	"many-to-many (parent)": {
+		"prefix": ["pmtm", "parentmtm"],
+		"body": [
+			"$1s: {",
+			"\tcollection: '${1:childModel}',",
+			"\tvia: '${3:referenceName}'",
+			"}$0"
+		],
+		"description": "To generate a snippet for many-to-many (parent)"
+	},
+
+	"many-to-many (child)": {
+		"prefix": ["cmtm", "childmtm"],
+		"body": [
+			"${1:referenceName}: {",
+			"\tcollection: '${2:parentModel}',",
+			"\tvia: '${3:childModel}s",
+			"}$0"
+		],
+		"description": "To generate a snippet for many-to-many (child)"
+	},
+
+	"one-way": {
+		"prefix": ["ow", "oneway"],
+		"body": [
+			"${1:referenceName}: {",
+			"\tmodel: '${2:Model}'",
+			"}"
+		],
+		"description": "To generate a snippet for one-way association"
+	},
+
+	"one-to-many (parent)": {
+		"prefix": ["potm", "parentotm"],
+		"body": [
+			"${1:referenceName}: {",
+			"\tcollection: '${2:parentModel}',",
+			"\tvia: '${3:childModel}s",
+			"}$0"
+		],
+		"description": "To generate a snippet for one-to-many (parent)"
+	},
+
+	"one-to-many (child)": {
+		"prefix": ["cotm", "childotm"],
+		"body": [
+			"${1:referenceName}: {",
+			"\tmodel: '${2:Model}'",
+			"}"
+		],
+		"description": "To generate a snippet for one-to-many (child)"
+	},
+
+	"one-to-one (parent)": {
+		"prefix": ["poto", "parentoto"],
+		"body": [
+			"${1:childModel}: {",
+			"\tcollection: '${1:childModel}',",
+			"\tvia: '${2:referenceName}'",
+			"}$0"
+		],
+		"description": "To generate a snippet for one-to-one (parent)"
+	},
+
+	"one-to-one (child)": {
+		"prefix": ["coto", "childoto"],
+		"body": [
+			"${1:referenceName}: {",
+			"\tmodel: '${2:Model}',",
+			"\tunique: true",
+			"}$0"
+		],
+		"description": "To generate a snippet for one-to-one (child)"
 	}
 
 }
