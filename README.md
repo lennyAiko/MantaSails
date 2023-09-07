@@ -93,16 +93,6 @@ Go follow on **[Twitter](https://twitter.com/c_lennyx)**!
 
 ---
 
-## Issues
-
-- [x] Work on attributes for associations: Create snippets for associations
-- [x] Fix default in [`sinput`, `si`]: Change from `default` to `defaultsTo`
-- [x] Add validations to attributes: for example, email should be `sattre` and cross-check others to be validated
-- [x] Fix `createEach`: Objects should be in an array
-- [x] Update readme: check completed tasks and add contributors
-
----
-
 ### Contributors
 - [Lennox Charles](https://github.com/lennyaiko)
 - [Oladapo Ayodeji](https://github.com/Dipsaint1)

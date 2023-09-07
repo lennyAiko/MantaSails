@@ -2,7 +2,7 @@
   "name": "mantasails",
   "displayName": "MantaSails",
   "description": "A snippet pack to make you more productive working with Sails",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "publisher": "LennoxCharles",
   "icon": "image/icon.png",
   "engines": {
@@ -32,11 +32,13 @@
 		"nodejs",
 		"sails",
 		"sailsjs",
-		"mantasails"
+		"mantasails",
+    "snippets",
+    "javascript"
 	],
   "bugs": {
-		"url": "https://github.com/sailscastshq/sailboat/issues",
-		"email": "kelvin@dominuskelvin.dev"
+		"url": "https://github.com/lennyAiko/MantaSails/issues",
+		"email": "lennyaiko17@gmail.com"
 	},
-	"homepage": "https://github.com/sailscastshq/sailboat/blob/master/README.md"
+	"homepage": "https://github.com/lennyAiko/MantaSails/blob/main/README.md"
 }
