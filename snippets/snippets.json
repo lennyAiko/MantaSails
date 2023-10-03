@@ -444,7 +444,7 @@
 			"\n",
 			"return res.json($1);"
 		],
-		"description": "generate a template for `.skip`"
+		"description": "generate a template for .skip"
 	}
 
 }
