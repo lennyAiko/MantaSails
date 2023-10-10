@@ -43,6 +43,8 @@ MantaSails is released under the [MIT License](https://github.com/lennyAiko/Mant
 | par or patchroute            | generate a patch route template                 |
 | battr or booleanattribute    | generate a boolean attribute template           |
 | sattr or stringattribute     | generate a string attribute template            |
+| sattre or emailattribute     | generate a email attribute template             |
+| sattrp or passwordattribute  | generate a password attribute template          |
 | nattr or numberattribute     | generate a number attribute template            |
 | rb or rbody                  | generate a template to unpack request           |
 | atc or addtocollection       | generate a template for `.addToCollection`      |
@@ -78,6 +80,8 @@ MantaSails is released under the [MIT License](https://github.com/lennyAiko/Mant
 | cotm or childotm             | generate a template for one-to-many (child)     |
 | poto or parentoto            | generate a template for one-to-one (parent)     |
 | coto or childoto             | generate a template for one-to-one (child)      |
+| st or sort                   | generate a template for `.sort`                 |
+| sk or skip                   | generate a template for `.skip`                 |
 
 ---
 

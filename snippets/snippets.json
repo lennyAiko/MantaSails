@@ -122,6 +122,19 @@
 		"description": "A template for email attribute"
 	},
 
+	"password attributes": {
+		"prefix": ["sattrp", "sap"],
+		"body": [
+		  "$1: {",
+		  "\ttype: 'string',",
+		  "\trequired: true,",
+		  "\tminLength: $2,",
+		  "\tprotected: true",
+		  "},$0"
+		],
+		"description": "A template for password attribute"
+	},
+
 	"unpack request body": {
 		"prefix": ["rb", "rbody"],
 		"body": "const { $1, $0 } = this.req.body",
@@ -407,6 +420,31 @@
 			"}$0"
 		],
 		"description": "To generate a snippet for one-to-one (child)"
+	},
+
+	"sort": {
+		"prefix": ["st", "sort"],
+		"body": [
+			"let $1 = await $2.find({ $3: $0 })",
+			".sort([",
+			"\t{ $4: 'ASC' }",
+			"\t{ $5: 'ASC' }",
+			"]);",
+			"\n",
+			"return res.json($1);"
+		],
+		"description": "generate a template for sort"
+	},
+
+	"skip": {
+		"prefix": ["sk", "skip"],
+		"body": [
+			"let $1 = await $2.find({ $3: $0 })",
+			".skip(1);",
+			"\n",
+			"return res.json($1);"
+		],
+		"description": "generate a template for .skip"
 	}
 
 }
