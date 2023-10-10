@@ -101,6 +101,7 @@ Go follow on **[Twitter](https://twitter.com/c_lennyx)**!
 - [Lennox Charles](https://github.com/lennyaiko)
 - [Oladapo Ayodeji](https://github.com/Dipsaint1)
 - [Barbara Odozi](https://github.com/geekiedj)
+- [Charles Iroegbu](https://github.com/charlescookey)
 
 Got some feedback? Send a DM on **[Twitter](https://twitter.com/c_lennyx)**
 
