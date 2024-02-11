@@ -86,6 +86,7 @@ MantaSails is released under the [MIT License](https://github.com/lennyAiko/Mant
 | sir or inertiarender         | generate a template for `sails.inertia.render`   |
 | sil or inertialocation       | generate a template for `sails.inertia.location` |
 | sih or inertiashare          | generate a template for `sails.inertia.share`    |
+| fs or flushshare             | generate a template for `.flushShared`           |
 
 ---
 

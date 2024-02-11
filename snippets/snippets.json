@@ -439,5 +439,11 @@
     "prefix": ["sih", "inertiashare"],
     "body": "sails.inertia.share('$1', $0);",
     "description": "generate a template for sails.inertia.share"
+  },
+
+  "flushShared": {
+    "prefix": ["fs", "flushshared"],
+    "body": "sails.inertia.flushShared('$0');",
+    "description": "generate a template for sails.inertia.flushShared"
   }
 }
