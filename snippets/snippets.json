@@ -427,5 +427,11 @@
     "prefix": ["sir", "inertiarender"],
     "body": "sails.inertia.render('$1', { $0 })",
     "description": "generate a template for sails.inertia.render"
+  },
+
+  "location": {
+    "prefix": ["sil", "inertialocation"],
+    "body": "sails.inertia.location('$1')",
+    "description": "generate a template for sails.inertia.location"
   }
 }
