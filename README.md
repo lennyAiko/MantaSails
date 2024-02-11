@@ -9,6 +9,7 @@ MantaSails is a Sails snippet tool for vscode. It is efficient and fun to make u
 ---
 
 ## Table of Contents
+
 - [Installation](#installation)
 - [License](#license)
 - [List of snippets](#list-of-snippets)
@@ -82,6 +83,7 @@ MantaSails is released under the [MIT License](https://github.com/lennyAiko/Mant
 | coto or childoto             | generate a template for one-to-one (child)      |
 | st or sort                   | generate a template for `.sort`                 |
 | sk or skip                   | generate a template for `.skip`                 |
+| sir or inertiarender         | generate a template for `sails.inertia.render`  |
 
 ---
 
@@ -98,6 +100,7 @@ Go follow on **[Twitter](https://twitter.com/c_lennyx)**!
 ---
 
 ### Contributors
+
 - [Lennox Charles](https://github.com/lennyaiko)
 - [Oladapo Ayodeji](https://github.com/Dipsaint1)
 - [Barbara Odozi](https://github.com/geekiedj)

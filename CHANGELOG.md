@@ -6,6 +6,8 @@ All notable changes to the "mantasails" extension will be documented in this fil
 
 - Fixed issues with `string` and `email` snippets
 - Fixed typo error on `update` snipper
+- Updated LICENSE
+- Add snippets for boring stack
 
 ## [1.0.1]
 

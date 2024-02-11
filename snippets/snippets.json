@@ -421,5 +421,11 @@
       "return res.json($1);"
     ],
     "description": "generate a template for .skip"
+  },
+
+  "render": {
+    "prefix": ["sir", "inertiarender"],
+    "body": "sails.inertia.render('$1', { $0 })",
+    "description": "generate a template for sails.inertia.render"
   }
 }
