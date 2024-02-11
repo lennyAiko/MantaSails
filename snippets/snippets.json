@@ -433,5 +433,11 @@
     "prefix": ["sil", "inertialocation"],
     "body": "sails.inertia.location('$1')",
     "description": "generate a template for sails.inertia.location"
+  },
+
+  "share": {
+    "prefix": ["sih", "inertiashare"],
+    "body": "sails.inertia.share('$1', $0);",
+    "description": "generate a template for sails.inertia.share"
   }
 }
