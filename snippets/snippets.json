@@ -82,8 +82,7 @@
       "$1: {",
       "\ttype: 'string',",
       "\trequired: true,",
-      "\tmaxLength: $2",
-      "\tisString: true",
+      "\tmaxLength: $2,",
       "},$0"
     ],
     "description": "A template for string attribute"
@@ -110,8 +109,8 @@
       "\ttype: 'string',",
       "\trequired: true,",
       "\tminLength: $2,",
-      "\tisEmail: true",
-      "\tisUnique: true",
+      "\tisEmail: true,",
+      "\tunique: true",
       "},$0"
     ],
     "description": "A template for email attribute"
