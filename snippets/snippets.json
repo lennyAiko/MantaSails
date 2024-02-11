@@ -1,450 +1,426 @@
 {
-	"generate function": {
-		"prefix": ["mxf", "fhelper"],
-		"body": [
-			"module.exports = {\n",
-			"\tfriendlyName: '$1',\n",
-			"\tdescription: 'This is $1',\n",
-			"\tinputs: {",
-			"\t\t$2",
-			"\t},\n",
-			"\texits: {",
-			"\t\t$3",
-			"\t},\n",
-			"\tfn: async function (inputs, exits) {\n",
-			"\t\t$0\n",
-			"\t\t// All done",
-			"\t\treturn;",
-			"\t}",
-			"}"
-		],
-        "description": "Generate a function following Sails convention"
-	},
+  "generate function": {
+    "prefix": ["mxf", "fhelper"],
+    "body": [
+      "module.exports = {\n",
+      "\tfriendlyName: '$1',\n",
+      "\tdescription: 'This is $1',\n",
+      "\tinputs: {",
+      "\t\t$2",
+      "\t},\n",
+      "\texits: {",
+      "\t\t$3",
+      "\t},\n",
+      "\tfn: async function (inputs, exits) {\n",
+      "\t\t$0\n",
+      "\t\t// All done",
+      "\t\treturn;",
+      "\t}",
+      "}"
+    ],
+    "description": "Generate a function following Sails convention"
+  },
 
-	"input template": {
-		"prefix": ["si", "sinput"],
-		"body": [
-			"$1: {",
-			"\ttype: '$2',",
-			"\trequired: ${3:true},",
-			"\tdefaultsTo: ${0:null},",
-			"}"
-		],
-		"description": "This is an input template"
-	},
+  "input template": {
+    "prefix": ["si", "sinput"],
+    "body": [
+      "$1: {",
+      "\ttype: '$2',",
+      "\trequired: ${3:true},",
+      "\tdefaultsTo: ${0:null},",
+      "}"
+    ],
+    "description": "This is an input template"
+  },
 
-	"exit template": {
-		"prefix": ["ei", "einput"],
-		"body": [
-			"$1: {",
-			"\tstatusCode: $2,",
-			"\tdescription: '$0'",
-			"}"
-		],
-		"description": "This is an exit template"
-	},
+  "exit template": {
+    "prefix": ["ei", "einput"],
+    "body": ["$1: {", "\tstatusCode: $2,", "\tdescription: '$0'", "}"],
+    "description": "This is an exit template"
+  },
 
-	"get route": {
-		"prefix": ["gr", "getroute"],
-		"body": "'GET /$1': '$2/$0'",
-		"description": "A template for get route"
-	},
+  "get route": {
+    "prefix": ["gr", "getroute"],
+    "body": "'GET /$1': '$2/$0'",
+    "description": "A template for get route"
+  },
 
-	"post route": {
-		"prefix": ["pr", "postroute"],
-		"body": "'POST /$1': '$2/$0'",
-		"description": "A template for post route"
-	},
+  "post route": {
+    "prefix": ["pr", "postroute"],
+    "body": "'POST /$1': '$2/$0'",
+    "description": "A template for post route"
+  },
 
-	"put route": {
-		"prefix": ["pur", "putroute"],
-		"body": "'PUT /$1': '$2/$0'",
-		"description": "A template for put route"
-	},
+  "put route": {
+    "prefix": ["pur", "putroute"],
+    "body": "'PUT /$1': '$2/$0'",
+    "description": "A template for put route"
+  },
 
-	"patch route": {
-		"prefix": ["par", "patchroute"],
-		"body": "'PATCH /$1': '$2/$0'",
-		"description": "A template for patch route"
-	},
+  "patch route": {
+    "prefix": ["par", "patchroute"],
+    "body": "'PATCH /$1': '$2/$0'",
+    "description": "A template for patch route"
+  },
 
-	"boolean attributes": {
-		"prefix": ["battr", "booleanattribute"],
-		"body": [
-			"$1: {",
-			"\ttype: 'boolean',",
-			"\trequired: true,",
-			"\tdefaultsTo: false,",
-			"\tisBoolean: true",
-			"},$0"
-		],
-		"description": "A template for boolean attribute"
-	},
+  "boolean attributes": {
+    "prefix": ["battr", "booleanattribute"],
+    "body": [
+      "$1: {",
+      "\ttype: 'boolean',",
+      "\trequired: true,",
+      "\tdefaultsTo: false,",
+      "\tisBoolean: true",
+      "},$0"
+    ],
+    "description": "A template for boolean attribute"
+  },
 
-	"string attributes": {
-		"prefix": ["sattr", "stringattribute"],
-		"body": [
-			"$1: {",
-			"\ttype: 'string',",
-			"\trequired: true,",
-			"\tmaxLength: $2",
-			"\tisString: true",
-			"},$0"
-		],
-		"description": "A template for string attribute"
-	},
+  "string attributes": {
+    "prefix": ["sattr", "stringattribute"],
+    "body": [
+      "$1: {",
+      "\ttype: 'string',",
+      "\trequired: true,",
+      "\tmaxLength: $2",
+      "\tisString: true",
+      "},$0"
+    ],
+    "description": "A template for string attribute"
+  },
 
-	"number attributes": {
-		"prefix": ["nattr", "numberattribute"],
-		"body": [
-			"$1: {",
-			"\ttype: 'number',",
-			"\trequired: true,",
-			"\tisNumber: true",
-			"\tmax: $3",
-			"\tmin: $1",
-			"},$0"
-		],
-		"description": "A template for number attribute"
-	},
+  "number attributes": {
+    "prefix": ["nattr", "numberattribute"],
+    "body": [
+      "$1: {",
+      "\ttype: 'number',",
+      "\trequired: true,",
+      "\tisNumber: true",
+      "\tmax: $3",
+      "\tmin: $1",
+      "},$0"
+    ],
+    "description": "A template for number attribute"
+  },
 
-	"email attributes": {
-		"prefix": ["sattre", "sae"],
-		"body": [
-		  "$1: {",
-		  "\ttype: 'string',",
-		  "\trequired: true,",
-		  "\tminLength: $2,",
-		  "\tisEmail: true",
-		  "\tisUnique: true",
-		  "},$0"
-		],
-		"description": "A template for email attribute"
-	},
+  "email attributes": {
+    "prefix": ["sattre", "sae"],
+    "body": [
+      "$1: {",
+      "\ttype: 'string',",
+      "\trequired: true,",
+      "\tminLength: $2,",
+      "\tisEmail: true",
+      "\tisUnique: true",
+      "},$0"
+    ],
+    "description": "A template for email attribute"
+  },
 
-	"password attributes": {
-		"prefix": ["sattrp", "sap"],
-		"body": [
-		  "$1: {",
-		  "\ttype: 'string',",
-		  "\trequired: true,",
-		  "\tminLength: $2,",
-		  "\tprotected: true",
-		  "},$0"
-		],
-		"description": "A template for password attribute"
-	},
+  "password attributes": {
+    "prefix": ["sattrp", "sap"],
+    "body": [
+      "$1: {",
+      "\ttype: 'string',",
+      "\trequired: true,",
+      "\tminLength: $2,",
+      "\tprotected: true",
+      "},$0"
+    ],
+    "description": "A template for password attribute"
+  },
 
-	"unpack request body": {
-		"prefix": ["rb", "rbody"],
-		"body": "const { $1, $0 } = this.req.body",
-		"description": "To unpack req.body much faster"
-	},
+  "unpack request body": {
+    "prefix": ["rb", "rbody"],
+    "body": "const { $1, $0 } = this.req.body",
+    "description": "To unpack req.body much faster"
+  },
 
-	"add to collection": {
-		"prefix": ["atc", "addtocollection"],
-		"body": "await $1.addToCollection($2, '$3').members([$4, $0])",
-		"description": "Add IDs of children to parent"
-	},
+  "add to collection": {
+    "prefix": ["atc", "addtocollection"],
+    "body": "await $1.addToCollection($2, '$3').members([$4, $0])",
+    "description": "Add IDs of children to parent"
+  },
 
-	"archive an object": {
-		"prefix": ["arc", "archive"],
-		"body": "await $1.archive({ $2: $0 })",
-		"description": "Soft-delete records that matches a given criteria"
-	},
+  "archive a record": {
+    "prefix": ["arc", "archive"],
+    "body": "await $1.archive({ $2: $0 })",
+    "description": "Soft-delete records that matches a given criteria"
+  },
 
-	"access an archived object": {
-		"prefix": ["aarc", "accessarchive"],
-		"body": [
-			"let ${1:archive} = await Archive.findOne({",
-			"\tfromModel: '$2',",
-			"\toriginalRecordId: $3",
-			"})"
-		],
-		"description": "Access soft-deleted records that matches a given criteria"
-	},
+  "access an archived record": {
+    "prefix": ["aarc", "accessarchive"],
+    "body": [
+      "let ${1:archive} = await Archive.findOne({",
+      "\tfromModel: '$2',",
+      "\toriginalRecordId: $3",
+      "})"
+    ],
+    "description": "Access soft-deleted records that matches a given criteria"
+  },
 
-	"calculate average": {
-		"prefix": ["avg", "average"],
-		"body": [
-			"let ${1:average} = await $2.avg('${3:numericCollection}')",
-			".where({",
-			"\t$4: { $5: $6 }",
-			"})"
-		],
-		"description": "Calculate average of specified attribute"
-	},
+  "calculate average": {
+    "prefix": ["avg", "average"],
+    "body": [
+      "let ${1:average} = await $2.avg('${3:numericCollection}')",
+      ".where({",
+      "\t$4: { $5: $6 }",
+      "})"
+    ],
+    "description": "Calculate average of specified attribute"
+  },
 
-	"count records": {
-		"prefix": ["cnt", "count"],
-		"body": "let $1Records = await $2.count({ $3: $0 })",
-		"description": "Get total number of records matching criteria"
-	},
+  "count records": {
+    "prefix": ["cnt", "count"],
+    "body": "let $1Records = await $2.count({ $3: $0 })",
+    "description": "Get total number of records matching criteria"
+  },
 
-	"create an object": {
-		"prefix": ["co", "createobj"],
-		"body": "await $1.create({ $2: $0 }).fetch()",
-		"description": "To create a new obj"
-	},
+  "create a record": {
+    "prefix": ["co", "createobj"],
+    "body": "await $1.create({ $2: $0 }).fetch()",
+    "description": "To create a new obj"
+  },
 
-	"create an object and fetch": {
-		"prefix": ["cof", "createobjfetch"],
-		"body": "let $1 = await $2.create({ $3: $0 }).fetch()",
-		"description": "To create a new obj and fetch"
-	},
+  "create a record and fetch": {
+    "prefix": ["cof", "createobjfetch"],
+    "body": "let $1 = await $2.create({ $3: $0 }).fetch()",
+    "description": "To create a new obj and fetch"
+  },
 
-	"create bulk object": {
-		"prefix": ["cb", "createbulk"],
-		"body": "await $1.createEach([{ $2: $3 }, { $4: $0 }]).fetch()",
-		"description": "To create bulk objs"
-	},
+  "create bulk record": {
+    "prefix": ["cb", "createbulk"],
+    "body": "await $1.createEach([{ $2: $3 }, { $4: $0 }]).fetch()",
+    "description": "To create bulk objs"
+  },
 
-	"create bulk object and fetch": {
-		"prefix": ["cbf", "createbulkfetch"],
-		"body": "let $1 = await $2.createEach([{ $3: $4 }, { $5: $0 }]).fetch()",
-		"description": "To create bulk objs and fetch"
-	},
+  "create bulk record and fetch": {
+    "prefix": ["cbf", "createbulkfetch"],
+    "body": "let $1 = await $2.createEach([{ $3: $4 }, { $5: $0 }]).fetch()",
+    "description": "To create bulk objs and fetch"
+  },
 
-	"delete records": {
-		"prefix": ["drs", "deleterecords"],
-		"body": "await $1.destroy({ $2: $0 })",
-		"description": "To delete more than one record with same criteria"
-	},
+  "delete records": {
+    "prefix": ["drs", "deleterecords"],
+    "body": "await $1.destroy({ $2: $0 })",
+    "description": "To delete more than one record with same criteria"
+  },
 
-	"delete specific records": {
-		"prefix": ["dsr", "deletespecificrecords"],
-		"body": [
-			"await $1.destroy({",
-			"\tid: { in: [ $2, $0 ] }",
-			"})"
-		],
-		"description": "To delete more than specific records"
-	},
+  "delete specific records": {
+    "prefix": ["dsr", "deletespecificrecords"],
+    "body": ["await $1.destroy({", "\tid: { in: [ $2, $0 ] }", "})"],
+    "description": "To delete more than specific records"
+  },
 
-	"delete range records": {
-		"prefix": ["drr", "deleterangerecords"],
-		"body": [
-			"let $1Records = await $2.destroy({",
-			"\tcontroversiality: { '$3': $4 }",
-			"})${0:.fetch()?}"
-		],
-		"description": "To delete a range of records"
-	},
+  "delete range records": {
+    "prefix": ["drr", "deleterangerecords"],
+    "body": [
+      "let $1Records = await $2.destroy({",
+      "\tcontroversiality: { '$3': $4 }",
+      "})${0:.fetch()?}"
+    ],
+    "description": "To delete a range of records"
+  },
 
-	"delete one object": {
-		"prefix": ["dr", "deleterecord"],
-		"body": "let $1Record = await $2.destroyOne({ $3: $0 })",
-		"description": "To delete a single object"
-	},
+  "delete one record": {
+    "prefix": ["dr", "deleterecord"],
+    "body": "let $1Record = await $2.destroyOne({ $3: $0 })",
+    "description": "To delete a single record"
+  },
 
-	"find one object": {
-		"prefix": ["fo", "findone"],
-		"body": [
-			"let $1Record = await $2.findOne({ $3: $4 })\n",
-			"if (!$1Record) {\n\tsails.log('Could not find $1')",
-			"\tthrow '$0' \n}"
-		],
-		"description": "To query a single object"
-	},
+  "find one record": {
+    "prefix": ["fo", "findone"],
+    "body": [
+      "let $1Record = await $2.findOne({ $3: $4 })\n",
+      "if (!$1Record) {\n\tsails.log('Could not find $1')",
+      "\tthrow '$0' \n}"
+    ],
+    "description": "To query a single record"
+  },
 
-	"find objects": {
-		"prefix": ["f", "find"],
-		"body": "let $1Records = await $2.find({ $3: $0 })",
-		"description": "To query multiple objects"
-	},
+  "find records": {
+    "prefix": ["f", "find"],
+    "body": "let $1Records = await $2.find({ $3: $0 })",
+    "description": "To query multiple records"
+  },
 
-	"find objects projections": {
-		"prefix": ["fop", "findproj"],
-		"body": [
-			"let $1Records = await $2.find({",
-			"\twhere: { $3: $4 },",
-			"\tselect: [ $5, $0 ]",
-			"});"
-		],
-		"description": "To query multiple objects with projections"
-	},
+  "find records projections": {
+    "prefix": ["fop", "findproj"],
+    "body": [
+      "let $1Records = await $2.find({",
+      "\twhere: { $3: $4 },",
+      "\tselect: [ $5, $0 ]",
+      "});"
+    ],
+    "description": "To query multiple records with projections"
+  },
 
-	"find or create object": {
-		"prefix": ["foc", "findorcreate"],
-		"body": "let ${1:obj}Record = await $2.findOrCreate({ $3: $4 }, ${0: objectToCreate})",
-		"description": "To find an object or create it"
-	},
+  "find or create record": {
+    "prefix": ["foc", "findorcreate"],
+    "body": "let ${1:obj}Record = await $2.findOrCreate({ $3: $4 }, ${0: recordToCreate})",
+    "description": "To find a record or create it"
+  },
 
-	"find or create object exec": {
-		"prefix": ["foce", "findorcreateexec"],
-		"body": [
-			"let item = $1.findOrCreate({ $2: $3 }, ${4: objectToCreate})",
-			".exec(async(${5:err}, ${6:obj}, ${7:wasCreated}) => { \n",
-			"\tif(${5:err}) {\n\t\tsails.log(${5:err})\n\t\treturn this.res.serverError(${5:err})\n\t}",
-			"\tif(${7:wasCreated}) {\n\t\tsails.log('Created new object')\n\treturn ${6:obj}\n\t}",
-			"\telse {\n\t\tsails.log('Found existing object')\n\t\treturn ${6:obj}\n\t}",
-			"})",
-			"$0"
-		],
-		"description": "To find an object or create it, with exec"
-	},
+  "find or create record exec": {
+    "prefix": ["foce", "findorcreateexec"],
+    "body": [
+      "let item = $1.findOrCreate({ $2: $3 }, ${4: recordToCreate})",
+      ".exec(async(${5:err}, ${6:obj}, ${7:wasCreated}) => { \n",
+      "\tif(${5:err}) {\n\t\tsails.log(${5:err})\n\t\treturn this.res.serverError(${5:err})\n\t}",
+      "\tif(${7:wasCreated}) {\n\t\tsails.log('Created new record')\n\treturn ${6:obj}\n\t}",
+      "\telse {\n\t\tsails.log('Found existing record')\n\t\treturn ${6:obj}\n\t}",
+      "})",
+      "$0"
+    ],
+    "description": "To find a record or create it, with exec"
+  },
 
-	"remove from collection": {
-		"prefix": ["rc", "removecollection"],
-		"body": "await $1.removeFromCollection($2, '$3').members([ $4, $0 ])",
-		"description": "To remove one or more members from a specific collection"
-	},
+  "remove from collection": {
+    "prefix": ["rc", "removecollection"],
+    "body": "await $1.removeFromCollection($2, '$3').members([ $4, $0 ])",
+    "description": "To remove one or more members from a specific collection"
+  },
 
-	"replace specified collection": {
-		"prefix": ["rsc", "replacecollection"],
-		"body": "await $1.replaceCollection($2, '$3').members([ $4, $0 ])",
-		"description": "To replace members of a specified collection"
-	},
+  "replace specified collection": {
+    "prefix": ["rsc", "replacecollection"],
+    "body": "await $1.replaceCollection($2, '$3').members([ $4, $0 ])",
+    "description": "To replace members of a specified collection"
+  },
 
-	"stream records": {
-		"prefix": ["sr", "streamrecords"],
-		"body": "await $1.stream({ $2: $3 }).eachRecord(async ($4)=> { $0 })",
-		"description": "To stream each record from database"
-	},
+  "stream records": {
+    "prefix": ["sr", "streamrecords"],
+    "body": "await $1.stream({ $2: $3 }).eachRecord(async ($4)=> { $0 })",
+    "description": "To stream each record from database"
+  },
 
-	"sum records": {
-		"prefix": ["sumr", "sumrecords"],
-		"body": "let ${1:total} = await $2.sum('$0')",
-		"description": "To take a sum of records"
-	},
+  "sum records": {
+    "prefix": ["sumr", "sumrecords"],
+    "body": "let ${1:total} = await $2.sum('$0')",
+    "description": "To take a sum of records"
+  },
 
-	"update a records": {
-		"prefix": ["urs", "updaterecords"],
-		"body": [
-			"let $1 = await $2.update({ $3: $4 })",
-			".set({ $5: $6 })"
-		],
-		"description": "To update records"
-	},
+  "update a records": {
+    "prefix": ["urs", "updaterecords"],
+    "body": ["let $1 = await $2.update({ $3: $4 })", ".set({ $5: $6 })"],
+    "description": "To update records"
+  },
 
-	"update a records fetch": {
-		"prefix": ["ursf", "updaterecordsfetch"],
-		"body": [
-			"let $1 = await $2.update({ $3: $4 })",
-			".set({ $5: $6 }).fetch()"
-		],
-		"description": "To update records and fetch"
-	},
+  "update a records fetch": {
+    "prefix": ["ursf", "updaterecordsfetch"],
+    "body": [
+      "let $1 = await $2.update({ $3: $4 })",
+      ".set({ $5: $6 }).fetch()"
+    ],
+    "description": "To update records and fetch"
+  },
 
-	"update a record": {
-		"prefix": ["ur", "updaterecord"],
-		"body": [
-			"let $1 = await $2.updateOne({ $3: $4 })",
-			".set({ $5: $6 })"
-		],
-		"description": "To update a particular record"
-	},
+  "update a record": {
+    "prefix": ["ur", "updaterecord"],
+    "body": ["let $1 = await $2.updateOne({ $3: $4 })", ".set({ $5: $6 })"],
+    "description": "To update a particular record"
+  },
 
-	"validate a record": {
-		"prefix": ["vr", "validaterecord"],
-		"body": [
-			"try {",
-			"\tlet $1 = $2.validate('$3', '$4')",
-			"} catch (${0:err}) {",
-			"\tsails.log(${0:err})",
-			"}"
-		],
-		"description": "To validate a particular record"
-	},
+  "validate a record": {
+    "prefix": ["vr", "validaterecord"],
+    "body": [
+      "try {",
+      "\tlet $1 = $2.validate('$3', '$4')",
+      "} catch (${0:err}) {",
+      "\tsails.log(${0:err})",
+      "}"
+    ],
+    "description": "To validate a particular record"
+  },
 
-	"many-to-many (parent)": {
-		"prefix": ["pmtm", "parentmtm"],
-		"body": [
-			"$1s: {",
-			"\tcollection: '${1:childModel}',",
-			"\tvia: '${3:referenceName}'",
-			"}$0"
-		],
-		"description": "To generate a snippet for many-to-many (parent)"
-	},
+  "many-to-many (parent)": {
+    "prefix": ["pmtm", "parentmtm"],
+    "body": [
+      "$1s: {",
+      "\tcollection: '${1:childModel}',",
+      "\tvia: '${3:referenceName}'",
+      "}$0"
+    ],
+    "description": "To generate a snippet for many-to-many (parent)"
+  },
 
-	"many-to-many (child)": {
-		"prefix": ["cmtm", "childmtm"],
-		"body": [
-			"${1:referenceName}: {",
-			"\tcollection: '${2:parentModel}',",
-			"\tvia: '${3:childModel}s",
-			"}$0"
-		],
-		"description": "To generate a snippet for many-to-many (child)"
-	},
+  "many-to-many (child)": {
+    "prefix": ["cmtm", "childmtm"],
+    "body": [
+      "${1:referenceName}: {",
+      "\tcollection: '${2:parentModel}',",
+      "\tvia: '${3:childModel}s",
+      "}$0"
+    ],
+    "description": "To generate a snippet for many-to-many (child)"
+  },
 
-	"one-way": {
-		"prefix": ["ow", "oneway"],
-		"body": [
-			"${1:referenceName}: {",
-			"\tmodel: '${2:Model}'",
-			"}"
-		],
-		"description": "To generate a snippet for one-way association"
-	},
+  "one-way": {
+    "prefix": ["ow", "oneway"],
+    "body": ["${1:referenceName}: {", "\tmodel: '${2:Model}'", "}"],
+    "description": "To generate a snippet for one-way association"
+  },
 
-	"one-to-many (parent)": {
-		"prefix": ["potm", "parentotm"],
-		"body": [
-			"${1:referenceName}: {",
-			"\tcollection: '${2:parentModel}',",
-			"\tvia: '${3:childModel}s",
-			"}$0"
-		],
-		"description": "To generate a snippet for one-to-many (parent)"
-	},
+  "one-to-many (parent)": {
+    "prefix": ["potm", "parentotm"],
+    "body": [
+      "${1:referenceName}: {",
+      "\tcollection: '${2:parentModel}',",
+      "\tvia: '${3:childModel}s",
+      "}$0"
+    ],
+    "description": "To generate a snippet for one-to-many (parent)"
+  },
 
-	"one-to-many (child)": {
-		"prefix": ["cotm", "childotm"],
-		"body": [
-			"${1:referenceName}: {",
-			"\tmodel: '${2:Model}'",
-			"}"
-		],
-		"description": "To generate a snippet for one-to-many (child)"
-	},
+  "one-to-many (child)": {
+    "prefix": ["cotm", "childotm"],
+    "body": ["${1:referenceName}: {", "\tmodel: '${2:Model}'", "}"],
+    "description": "To generate a snippet for one-to-many (child)"
+  },
 
-	"one-to-one (parent)": {
-		"prefix": ["poto", "parentoto"],
-		"body": [
-			"${1:childModel}: {",
-			"\tcollection: '${1:childModel}',",
-			"\tvia: '${2:referenceName}'",
-			"}$0"
-		],
-		"description": "To generate a snippet for one-to-one (parent)"
-	},
+  "one-to-one (parent)": {
+    "prefix": ["poto", "parentoto"],
+    "body": [
+      "${1:childModel}: {",
+      "\tcollection: '${1:childModel}',",
+      "\tvia: '${2:referenceName}'",
+      "}$0"
+    ],
+    "description": "To generate a snippet for one-to-one (parent)"
+  },
 
-	"one-to-one (child)": {
-		"prefix": ["coto", "childoto"],
-		"body": [
-			"${1:referenceName}: {",
-			"\tmodel: '${2:Model}',",
-			"\tunique: true",
-			"}$0"
-		],
-		"description": "To generate a snippet for one-to-one (child)"
-	},
+  "one-to-one (child)": {
+    "prefix": ["coto", "childoto"],
+    "body": [
+      "${1:referenceName}: {",
+      "\tmodel: '${2:Model}',",
+      "\tunique: true",
+      "}$0"
+    ],
+    "description": "To generate a snippet for one-to-one (child)"
+  },
 
-	"sort": {
-		"prefix": ["st", "sort"],
-		"body": [
-			"let $1 = await $2.find({ $3: $0 })",
-			".sort([",
-			"\t{ $4: 'ASC' }",
-			"\t{ $5: 'ASC' }",
-			"]);",
-			"\n",
-			"return res.json($1);"
-		],
-		"description": "generate a template for sort"
-	},
+  "sort": {
+    "prefix": ["st", "sort"],
+    "body": [
+      "let $1 = await $2.find({ $3: $0 })",
+      ".sort([",
+      "\t{ $4: 'ASC' }",
+      "\t{ $5: 'ASC' }",
+      "]);",
+      "\n",
+      "return res.json($1);"
+    ],
+    "description": "generate a template for sort"
+  },
 
-	"skip": {
-		"prefix": ["sk", "skip"],
-		"body": [
-			"let $1 = await $2.find({ $3: $0 })",
-			".skip(1);",
-			"\n",
-			"return res.json($1);"
-		],
-		"description": "generate a template for .skip"
-	}
-
+  "skip": {
+    "prefix": ["sk", "skip"],
+    "body": [
+      "let $1 = await $2.find({ $3: $0 })",
+      ".skip(1);",
+      "\n",
+      "return res.json($1);"
+    ],
+    "description": "generate a template for .skip"
+  }
 }
