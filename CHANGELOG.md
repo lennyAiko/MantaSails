@@ -2,6 +2,11 @@
 
 All notable changes to the "mantasails" extension will be documented in this file.
 
+## [1.0.2]
+
+- Fixed issues with `string` and `email` snippets
+- Fixed typo error on `update` snipper
+
 ## [1.0.1]
 
 - Snippets for associations now available

@@ -298,13 +298,13 @@
     "description": "To take a sum of records"
   },
 
-  "update a records": {
+  "update records": {
     "prefix": ["urs", "updaterecords"],
     "body": ["let $1 = await $2.update({ $3: $4 })", ".set({ $5: $6 })"],
     "description": "To update records"
   },
 
-  "update a records fetch": {
+  "update a record fetch": {
     "prefix": ["ursf", "updaterecordsfetch"],
     "body": [
       "let $1 = await $2.update({ $3: $4 })",
