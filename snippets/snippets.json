@@ -23,13 +23,7 @@
 
   "input template": {
     "prefix": ["si", "sinput"],
-    "body": [
-      "$1: {",
-      "\ttype: '$2',",
-      "\trequired: ${3:true},",
-      "\tdefaultsTo: ${0:null},",
-      "}"
-    ],
+    "body": ["$1: {", "\ttype: '$2',", "\trequired: ${3:true},", "}"],
     "description": "This is an input template"
   },
 
